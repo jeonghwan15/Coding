@@ -1,0 +1,39 @@
+.house{
+    border-collapse: collapse;
+    font-size:17px;
+}
+.house tr th
+{
+    border-bottom:4px solid #aaa;
+    background: darkblue;
+    color:white;
+}
+.house tr td
+{
+    border-bottom:2px solid #aaa;
+    height: 30px;
+    text-align: center;
+}
+.date{ width: 70px; text-align:left; }
+.detail{ width: 100px; }
+.income{ width: 70px; }
+.expense{ width: 70px; }
+.payment{ width: 100px; }
+
+.dateCell
+{
+    background: goldenrod; text-align:left;
+}
+.incomeCell{ background: darkgreen; }
+.expenseCell{ 
+    background: rgb(136, 1, 1); color: white;
+}
+.detailCell:hover{ background: darkcyan; }
+.detail, .expense, .detailCell, .expenseCell
+{
+    border-left:2px solid #aaa; border-right:2px solid #aaa;
+}
+.dateCell, .incomeCell, .expenseCell, .paymentCell
+{
+    text-align:center;
+}

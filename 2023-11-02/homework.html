@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 과제</title>
+    <style>
+        .topLeft, .topRight, .Right{
+            width:200px;
+        }
+        .Left, .Middle{ width:400px; }
+        .topMiddle{ width: 600px; }
+        .top td{
+            border:3px solid red;
+        }
+        .bot td{
+            border: 1px solid black;
+        }
+        .top{ height: 100px; }
+        .bot{ height: 700px; }
+        .box{
+            border-collapse: collapse;
+            height: 800px;
+            width: 1000px;
+        }
+        .Left{ background: orange; }
+        .Middle{ background: lightgreen; }
+        .Right{ background: lightcyan; }
+    
+    </style>
+</head>
+
+<body>
+    <table class="box">
+        <tr class="top">
+            <td class="topLeft"></td>
+            <td class="topMiddle" colspan="3"></td>
+            
+            <td class="topRight"></td>
+        </tr>
+        <tr class="bot">
+            <td class="Left" colspan="2"></td>
+            
+            <td class="Middle" colspan="2"></td>
+            
+            <td class="Right"></td>
+        </tr>
+
+    </table>
+</body>
+</html>
