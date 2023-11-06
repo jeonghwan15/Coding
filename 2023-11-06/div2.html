@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1{
+            width:500px;
+            height:350px;
+            background:paleturquoise;
+            padding-top:200px;
+            box-sizing:border-box;
+        }
+        #div1Child1{
+            width:100px;
+            height:100px;
+            background:darkred;
+            color:azure;
+            margin-left: 250px;      
+        }
+        #div1Child2{
+            width:100px;
+            height:100px;
+            background:darkblue;
+            color:azure;
+            margin-left:100px;
+        }
+
+        #div2{
+            width:200px;
+        }
+        #div2 img{
+            width:100%;
+            opacity: 0.4;
+            transition: all 1s ease;
+        }
+        #div2 h2{
+            margin-top:-50px;
+        }
+        #div2:hover img{
+            opacity: 1;
+        }
+
+        #div3{
+            width:200px;
+            height:300px;
+            background: url(./static/images/images.jpg);
+            background-size:cover; /* 배경이미지의 크기 cover contain */
+            background-position:left; /* 배경이미지 위치조절(위,중간,아래,왼쪽,오른쪽) */
+            background-repeat:no-repeat; /* 배경이미지 반복 여부 */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="div1">
+        <div id="div1Child1">child1</div>
+        <div id="div1Child2">child2</div>
+    </div>
+    <div id="div2">
+        <img src="./static/images/images.jpg" alt="조형물">
+        <h2>조형물사진</h2>
+    </div>
+    <div id="div3">
+
+    </div>
+</body>
+</html>
