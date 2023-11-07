@@ -1,0 +1,12 @@
+#out{
+    width:800px;
+    height:250px;
+    background:yellow;
+}
+#in
+{
+    width:200px;
+    height:50px;
+    background:grey;
+    margin-left:600px;
+}
