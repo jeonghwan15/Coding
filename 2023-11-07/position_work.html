@@ -1,0 +1,71 @@
+<!--
+
+    과제!
+
+    div 태그를 사용하여 메인페이지 만들기
+    자세하게 안 만들어도 되고 마지막에 만든 거처럼
+    로고, 메뉴, 본문, foot 구성으로 만들기
+
+    단, 본문에는 이미지로 채우지 말고
+    ul 태그를 사용하여 몇개의 글 표시 하기
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동구청</title>
+    <link rel="stylesheet" href="./static/css/position_work.css">
+</head>
+<body>
+
+    <div id="wrap">
+        <header id="header">
+            <div class="logoWrap">
+                <img src="https://loremflickr.com/100/50/korean_flag" alt="logo">
+            <div class="menuWrap">
+                <nav class="nav">
+                    <div class="menu">
+                        <nav class="nav">
+                            <div class="menu">민원신청</div>
+                            <div class="menu">구민참여</div>
+                            <div class="menu">동구소식</div>
+                            <div class="menu">정보공개</div>
+                            <div class="menu">분야별정보</div>
+                            <div class="menu">동구소개</div>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <ul>
+                <li>공지사항
+                    <ul>「제26회 동구 고운매합창단 정기연주회」 개최 안내</ul>
+                    <ul>「인쇄UP 아트 페스티벌」개최</ul>
+                    <ul>2023년 대전사랑카드 연말 이벤트 안내</ul>
+                </li>
+            </ul>
+            <ul>
+                <li>채용공고
+                    <ul>시간선택제임기제공무원 채용시험 서류전형 합격자 발표 및 면접시험 시행계획</ul>
+                    <ul>개별주택가격특성조사 현장조사원(기간제근로자) 채용공고</ul>
+                    <ul>2024년 개별주택특성조사 기간제근로자 채용심사 최종합격자 공고</ul>
+                </li>
+            </ul>
+        </main>
+        <footer id="foot">
+            <p class="footMenu">
+                <b>개인정보처리방침</b>
+                <b>오시는길</b>
+            </p>
+            <adress class="addr">
+                대전광역시 동구 동구청로 147(가오동) / 대표전화(042) 251-4114 <br>
+                COPYRIGHT 2019(c) BY DONGGU DISTRICT.ALL RIGHTS RESERVED
+            </adress>
+        </footer>
+    </div>
+    
+</body>
+</html>
