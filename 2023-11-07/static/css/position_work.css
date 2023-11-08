@@ -8,8 +8,8 @@ body{
     position:relative;
 }
 #header{
-    width:100%
-    padding:20px 0;
+    width:100%;
+    padding: 20px 0;
     position:sticky;
     top:0;
     z-index: 1000;
@@ -40,13 +40,18 @@ body{
 }
 .nav .menu:nth-child(5){
     left:400px;
-}.nav .menu:nth-child(6){
+}
+.nav .menu:nth-child(6){
     left:520px;
 }
 #main{
     position:relative;
     width:100%
 }
+#main .content:nth-child(2){
+    position:relative;
+}
+
 #foot{
     width:100%;
     padding:50px;
