@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+}
+#wrap{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+#header{
+    width:100%;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:0;
+    background:burlywood;
+}
+.logoWrap{
+    width:100px;
+    height:50px;
+}
+.menuWrap{
+    width:50px;
+    position:absolute;
+    line-height:50px;
+}
+.menu{
+    padding: 
+}
+
+
+
+#footer{
+    width:100%;
+
+}
