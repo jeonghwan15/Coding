@@ -12,7 +12,8 @@
     padding:20px 0;
     position:sticky;
     top:0;
-    z-index:0;
+    z-index:100;
+    position:relative;
     background:rgb(184, 180, 180);
 }
 .title{
@@ -23,7 +24,6 @@
     font-size:15px;
     text-align:right;
     padding:40px 10px;
-   
 }
 .menu{
     margin-left:30px;
@@ -46,7 +46,7 @@
 }
 .button{
     display:flex;
-    margin-left:75px;
+    margin-left:120px;
     margin-bottom:20px;
 }
 .devTool{
@@ -57,11 +57,13 @@
     cursor:pointer;
 }
 .card{
+    position:relative;
+    bottom:250px;
     display:flex;
     width:100px; height:500px;
     padding:10px;
 }
-.card learn{
+.card .learn{
     width:200px; height:100%;
     overflow:hidden;
     border-top-right-radius: 10px;
@@ -83,7 +85,7 @@
     transition: transform 1.5s ease-in-out;
 }
 .learn:hover img, .build:hover img{
-    transform:scale(0.8) ;
+    transform:scale(0.8);
 }
 #footer{
     width:100%;
