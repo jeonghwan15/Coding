@@ -1,65 +1,150 @@
-<!--  index.html  -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="웹개발 코드를 작성하여 공유하세요.">
-    <title> WebCode </title>
+/* default.css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#wrap{
+    width:100%;
+    background:#000;
+    color:#eee;
+    position:relative;
+    /* height:100vh; */
+}
+#header{
+    width:200px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    background:#272731;
+}
+#nav{
+    width:100%;
+    padding:20px 7px;
+}
+.title{
+    text-align: center;
+}
 
-    <link rel="stylesheet" href="./static/css/default.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./static/images/favicon.ico">
-    <!-- 파비콘 favicon  사이트 아이콘 -->
+.menuWrap{
+    width:100%;
+    padding:30px 0;
+}
+.menu{
+    display:block;
+    padding:10px 0;
+    cursor: pointer;
+}
+.menuWrap .menu:first-child{
+    text-align: center;
+    background:#000;
+    margin-bottom:15px;
+    border-radius: 5px;
+    position:relative;
+    overflow: hidden;
+    padding:3px;
+}
+.menuWrap .menu:first-child::before{
+    content:"";
+    background:linear-gradient(90deg, #FF0000, #FFBB00,#FFE400
+    ,#47C83E,#0054FF,#003399,#8041D9);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.menuWrap .menu:first-child span{
+    z-index: 100;
+    position:relative;
+    background:#000;
+    display:block;
+    padding:10px 0;
+    border-radius: 6px;
+}
 
-</head>
-<body>
-    <div id="wrap">
-        <div id="header">
-            <div id="nav">
-                <div class="title">
-                    <h2> Infinity Code Lap </h2>
-                </div>
-                <div class="menuWrap">
-                    <span class="menu"><span>Start Coding</span></span>
-                    <span class="menu">실험실 검색</span>
-                    <span class="menu">실습방</span>
-                    <span class="menu">자료실</span>
-                </div>
-            </div>
-        </div>
-        <div id="main">
-            <div class="siteDetail">
-                <h2>웹 코드를 구축 ,테스트, 공유할 수 있는 최고의 사이트입니다.</h2>
-                <h4>WebCode는 프런트엔드, 백엔드 개발자를 위한 소셜 개발환경
-                    입니다. 웹 사이트를 구축및 배포하고, 작업을 공유하고, 학습및
-                    디버깅을 위한 테스트를 만들어보세요.
-                </h4>
-                <img src="" alt="메인이미지">
-            </div>
-            <div class="siteUse">
-                <div class="button"><!-- 회원가입과 개발도구 사이트로 이동하기위한버튼-->
-                    <div class="freeSign">무료 가입</div>
-                    <div class="devTool">개발 도구</div>
-                </div>
-                <div class="card"><!-- 카드 UI로 구성 -->
-                    <div class="build">
-                        <h3>빌드및 테스트</h3>
-                        <img src="https://loremflickr.com/350/350/computer" alt="test">
-                    </div>
-                    <div class="learn">
-                        <h3>학습 및 공유</h3>
-                        <img src="https://loremflickr.com/350/350/developer" alt="share이미지">
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <div id="footer">
-            <h3>WEBCODE</h3>
-            <h4>2023WebCode</h4>
-            <h4>대한민국 대전광역시 중구 선화동 </h4>
-            <h4>관리자 : CODE TEAM</h4>
-        </div>
-    </div>
-</body>
-</html>
+#main{
+    margin-left:200px;
+    padding:100px 80px;
+    position:relative;
+}
+.siteDetail{
+    width:900px;
+    position:relative;
+    top:0;
+    left:0;
+}
+.siteDetail h2{
+    width:50%;
+    font-size:30px;
+}
+.siteDetail h4{
+    width:50%;
+    padding:20px 0;
+    line-height:30px;
+}
+.siteDetail img{
+    position:absolute;
+    top:0;  right:0;
+    width:400px;
+}
+
+.siteUse{
+    width:900px;
+    position:relative;
+    top:0; left:0;
+}
+.button{
+    margin:100px 0;
+    padding-left:50px;
+}
+.freeSign, .devTool{
+    display:inline-block;
+    cursor: pointer;
+    font-size:20px;
+    padding:10px 20px;
+}
+.freeSign{
+    background:#47C83E;
+    border-radius: 5px;
+}
+.freeSign:hover{
+    background:#31882a;
+}
+.devTool{
+    margin-left:20px;
+    background:#4c6fb7;
+    border-radius: 5px;
+}
+
+.card{
+    padding:50px;
+    width:900px;
+}
+.build, .learn{
+    display:inline-block;
+    width:350px;
+    background:#272731;
+    padding:20px;
+    border-radius: 10px;
+}
+
+.learn{
+    margin-left:50px;
+}
+.build img, .learn img{
+    width:100%;
+    border-radius: 10px;
+}
+.build h3, .learn h3{
+    font-size:25px;
+    padding-bottom:15px;
+}
+
+#footer{
+    margin-left:200px;
+    background:#262627;
+    padding:50px 100px;
+    line-height: 35px;
+}
