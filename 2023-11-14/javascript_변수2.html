@@ -177,17 +177,94 @@
     
 
     // 과제
-    // 컴퓨터가 육면체 주사위를 던졌다.   (math.rd()*5)+1
+    // 컴퓨터가 육면체 주사위를 던졌다.   (math.rd()*6)+1
     // 나도 육면체 주사위를 던졌다.
     // 주사위 값이 크면 이기는 게임이다.
     // 내가 승리 했는가 패배 했는가 출력하세요.
     // 단, 같은 숫자라면 비김!
 
-   var com = parseInt (Math.random()*5)+1;
-   var user = parseInt (Math.random()*5)+1;
-   var result = ( com < user ) ? "승리" : "패배";
-   result = ( com == user ) ? "비김" : result; 
-   console.log("컴퓨터 : "+com+" 나 : "+user+" 결과 : "+result);
+   
+//    var com = parseInt (Math.random()*6)+1;
+//    var user = parseInt (Math.random()*6)+1;
+//    var result = ( com < user ) ? "승리" : "패배";
+//    result = ( com == user ) ? "비김" : result; 
+//    console.log("컴퓨터 : "+com+" 나 : "+user+" 결과 : "+result);
+    //나
+
+    // var com = parseInt (Math.random()*6)+1;
+    // var user = parseInt (Math.random()*6)+1;
+    // var result = (user > com) ? "승리" : (user==com) ? "비김" : "패배";
+    // console.log("나 :"+user+" 컴 : "+com+" 결과 : "+result);
+
+    
+    //1. 소주 한잔을 마시면 수명이 2분 단축된다.
+    //   어떤 사람이 소주를 매일 같은 양으로 20년을 마셨다.     60*24*365*20/2 365일*20
+    //   이 사람이 하루에 몇잔의 소주를 마시는 지 입력 받기
+    //   총 단축된 수명이 몇분인가?
+    //   총 단축된 수명이 몇시간인가? (정수만 출력)
+    //   총 단축된 수명이 몇일인가?  (정수만 출력)
+
+    // var soju = parseInt (prompt ("하루에 소주 몇 잔"));
+    // var life = parseInt (soju*2*20*365);
+    // console.log("총 단축된 수명 : "+life+"(분)");
+    // console.log("총 단축된 수명 : "+( parseInt(life/60))+"(시간)");
+    // console.log("총 단축된 수명 : "+( parseInt(life/60/24))+"(일)");
+    
+    //2. 주사위게임
+    // 컴퓨터와 나는 각자 주사위를 두개씩 던진다.
+    // 주사위의 합이 큰쪽이 이긴다
+    // 내가 이겼는지 졌는지 비겼는지 출력하기
+    // 단, 두개의 주사위 값이 1이 나오면 무조건 이긴다.
+
+    // var com1 = parseInt(Math.random()*6)+1;
+    // var com2 = parseInt(Math.random()*6)+1;
+    // var user1 = parseInt(Math.random()*6)+1;
+    // var user2 = parseInt(Math.random()*6)+1;
+    // var result = (user1+user2 > com1+com2)? "승리" : (user1+user2==2)? "승리" : 
+    // (user1+user2 == com1+com2)? "비김" : "패배";
+    // console.log("나 : "+(user1+user2)+" 컴 : "+(com1+com2)+" 결과 : "+result);
+    //나
+
+    // var com1 = parseInt(Math.random()*6)+1;
+    // var com2 = parseInt(Math.random()*6)+1;
+    // var user1 = parseInt(Math.random()*6)+1;
+    // var user2 = parseInt(Math.random()*6)+1;
+
+    // var com = com1 + com2;
+    // var user = user1 + user2;
+
+    // var result = (user > com ) ? (com != 2) ? "승리" : "패배" : (user == com) ? "비김" : (user == 2)? "승리" : "패배" ;
+    // console.log(`컴퓨터 : (${com1},${com2}) , 나 : (${user1},${user2}) , 결과 :${result} `);
+    // ` backtick 일부 적용 X
+
+    
+    //3. 주차비 정산
+    // apple주차장의 주차요금 표
+    //  기본 주차비 - 1000원, 기본 시간 - 30분
+    //  ( 30분 이내 주차시 1000원, 5분 주차해도 1000원, 39분까지 1000원)
+    //  10분당 100원씩 추가 ( 40분 주차시 1100원, 54분 주차시 1200원)
+    //  2시간 이상 주차시 기본요금 변경
+    //             기본요금 - 1500원
+    //             (2시간 1분 주차시 - 1500원, 2시간 34분주차시 - 1800원)
+    // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
+
+    // var time parseInt(prompt ("주차시간"));
+    // var cost = 1000;
+    // var price = parseInt(time/10 * 100)
+    // 
+    // 
+
+    //나
+
+    var time = parseInt(prompt("주차시간"));
+    var cost = 1000;
+    //15 -30 -> -15/10 -> -1.5 -> -1
+    cost = (time >= 120) ? 1500:cost;
+    time = (time>=120) ? time-120 : (time>=30) ? time-30: 0;
+            // 큰값부터 적용
+    var price = parseInt(time/10) * 100 + cost;
+    console.log(`주차요금 : ${price}원`);
+    
 
 
 </script>       
