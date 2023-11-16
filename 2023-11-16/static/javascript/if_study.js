@@ -1,5 +1,5 @@
 //브라우저에 html태그가 모두 로드(화면표시) 되면 실행되는 스크립트 코드
-window.onload=function(){
+
 
     // 조건문 - if문, switch문
 
@@ -25,25 +25,25 @@ window.onload=function(){
     //         break;
     // }
 
-    var airjordan=2;
-    var airmax=97;
-    var alp ='나이키 에어포스 90 재고';
-    switch ( alp.split(" ")[1] ){
-        case "에어조던":
-            document.write("현재 재고 수량은 "+airjordan+"개");
-            break;
-        case "에어맥스":
-            document.write("현재 재고 수량은 "+airmax+"개");
-            break;
-        case "a":
-            document.write("apple");
-            break;
-        default:
-            document.write("죄송합니다.");
+    // var airjordan=2;
+    // var airmax=97;
+    // var alp ='나이키 에어포스 90 재고';
+    // switch ( alp.split(" ")[5] ){
+    //     case "에어조던":
+    //         document.write("현재 재고 수량은 "+airjordan+"개");
+    //         break;
+    //     case "에어맥스":
+    //         document.write("현재 재고 수량은 "+airmax+"개");
+    //         break;
+    //     case "a":
+    //         document.write("apple");
+    //         break;
+    //     default:
+    //         document.write("죄송합니다.");
 
 
 
-    }
+    // }
 
 // 과제
     // 주차비 정산
@@ -60,8 +60,24 @@ window.onload=function(){
     //             (2시간 1분 주차시 - 1500원, 2시간 34분주차시 - 1800원)
     // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
 
+    window.onload = function(){
+
+    var time=parseInt(prompt("주차시간"));
+    
+    var cost=1000;
 
 
+    var price = parseInt(time/10) * 100 + cost;
+    if(time>39){
+        alert(price);
+    }else if(time>=120){
+        alert()
+    }else if(time>=240){
+        alert()
+    }else if(time>=480){
+        alert()
+    }else if(time>=600);
+    }
 /*
     if( score >=90)
 
@@ -70,18 +86,18 @@ window.onload=function(){
 */
 
 
-    var score = 75;
-    switch( parseInt(score/10) ){
-        case 10: case 9:
-        document.write("A학점"); break;
-        case 8:
-            document.write("B학점"); break;
-        case 7:
-            document.write("C학점"); break;
-        default:
-            document.write("F학점");
+    // var score = 75;
+    // switch( parseInt(score/10) ){
+    //     case 10: case 9:
+    //     document.write("A학점"); break;
+    //     case 8:
+    //         document.write("B학점"); break;
+    //     case 7:
+    //         document.write("C학점"); break;
+    //     default:
+    //         document.write("F학점");
 
-    }
+    // }
 
 
     // 주사위 게임 만들기
@@ -98,7 +114,7 @@ window.onload=function(){
     // var user = user1+user2;
     // var com = com1+com2;
     
-    // if( user > com )
+    // if( user > com )`
     //     if( (com1 == com2) && (user != user2) ){
     //         alert("패");
     //     }else{
@@ -113,4 +129,3 @@ window.onload=function(){
     //     alert("무");
     // console.log(`나 : ${user1+user2} 컴 : ${com1+com2}`)    
     //     }
-}
