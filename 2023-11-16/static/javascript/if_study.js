@@ -61,22 +61,19 @@
     // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
 
     window.onload = function(){
-
     var time=parseInt(prompt("주차시간"));
-    
     var cost=1000;
-
-
-    var price = parseInt(time/10) * 100 + cost;
-    if(time>39){
-        alert(price);
-    }else if(time>=120){
-        alert()
+    if(time>=480){
+        cost=10000; time=0;
     }else if(time>=240){
-        alert()
-    }else if(time>=480){
-        alert()
-    }else if(time>=600);
+        cost=2500; time=time-240;
+    }else if(time>=120){
+        cost=1500; time=time-120;
+    }else{
+        time = time<30 ? 0 : time-30;  //간단한 조건 -> 조건연산자 {}없이 사용
+    }
+    var price = Math.floor( time/10 )*100 + cost;
+    document.write(`주차요금 : ${price} 원`);
     }
 /*
     if( score >=90)
