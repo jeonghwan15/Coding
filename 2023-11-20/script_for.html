@@ -218,43 +218,64 @@
     //     }
     // }
 
+
+    var user=parseInt(prompt("업다운 게임"));
+    var max=50;
+    var min=1;
+
+    for(;true;){
+        var com = Math.floor(Math.random()*max)+min;
+        if( user > com){
+            document.write("다운");
+            parseInt(min+++1);
+        }else if ( user < com){
+            document.write("업");
+            parseInt(max---1);
+        }else if ( user == com){
+            document.write("정답");
+            break;
+        }
+    }
+
+
+
 //문자열의 알파벳 위치 번호-> 위치번호를 프로그래밍에서는 인덱스라고 한다.
 
-    var word="international prototype";
-    // 지정한 알파벳의 갯수가 몇개인지 구하기
-    var alp="o";
-    var count=0;
+    // var word="international prototype";
+    // // 지정한 알파벳의 갯수가 몇개인지 구하기
+    // var alp="o";
+    // var count=0;
 
-    for ( var i=0; i< word.length; i++){
-        if(word.charAt(i) === alp )
-            count++;
-    }
-    document.write(`${alp}알파벳은 총 ${count}개 있다.`);
+    // for ( var i=0; i< word.length; i++){
+    //     if(word.charAt(i) === alp )
+    //         count++;
+    // }
+    // document.write(`${alp}알파벳은 총 ${count}개 있다.`);
 
-    for( var i=1; i<=100; i++){
-        if ( i%3==0 && i%10==0){
-            document.write("<div> pizzle buzzle</div>");
-        }
-        else if( i%3 == 0 ){
-            document.write("<div> pizzle</div>");
-        }else if(i%10==0){
-            document.write("<div>buzzle</div>");
-        }else
-        document.write(i+"  ");
-    }
+    // for( var i=1; i<=100; i++){
+    //     if ( i%3==0 && i%10==0){
+    //         document.write("<div> pizzle buzzle</div>");
+    //     }
+    //     else if( i%3 == 0 ){
+    //         document.write("<div> pizzle</div>");
+    //     }else if(i%10==0){
+    //         document.write("<div>buzzle</div>");
+    //     }else
+    //     document.write(i+"  ");
+    // }
     
 
-    </script>
+     </script>
 
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-        table tr td{
-            border:1px solid black;
-            width:100px;
-            height:50px;
-        }
+     <style>
+         table {
+             border-collapse: collapse;
+         }
+         table tr td{
+             border:1px solid black;
+             width:100px;
+             height:50px;
+         }
     </style>
 
 </head>
