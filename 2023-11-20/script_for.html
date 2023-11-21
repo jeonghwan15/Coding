@@ -219,18 +219,18 @@
     // }
 
 
-    var user=parseInt(prompt("업다운 게임"));
+    var user=parseInt(prompt("1~50 입력"));
     var max=50;
     var min=1;
 
     for(;true;){
         var com = Math.floor(Math.random()*max)+min;
         if( user > com){
-            document.write("다운");
-            parseInt(min+++1);
-        }else if ( user < com){
-            document.write("업");
-            parseInt(max---1);
+            document.write("다운 ");
+            (max-min)+++1;
+        }if ( user < com){
+            document.write("업 ");
+            max---1;
         }else if ( user == com){
             document.write("정답");
             break;
