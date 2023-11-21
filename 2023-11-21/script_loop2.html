@@ -193,55 +193,55 @@
 
 //1. 각 숫자는 1~9사이의 값이다.
 
-        for(var a=1; a<=9; a++){
-            for(var b=1; b<=9; b++){
-                for(var c=1; c<=9; c++){
-                    for(var d=1; d<=9; d++){
-                        // 2. 4개 숫자는 중복이 없다.
-if ( a!=b && a!=c && a!=d && b!=c && b!=d && c!=d){
-    // 3. 1번째 숫자는 4번째 숫자보다 2만큼 크다.
-    if( a== d+2){
-        //4. 2번째 숫자는 3번째 숫자보다 작다.
-        if (b<c){
-    //5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
-    var num = a*1000+b*100+c*10+d;
-    var temp = d*1000+c*100+b*10+a;
-             if( num +temp == 16896){
-                 alert(num);
-            }
-        }
-    }    
-}
-                    }
-                }
-            }
-        }
+//         for(var a=1; a<=9; a++){
+//             for(var b=1; b<=9; b++){
+//                 for(var c=1; c<=9; c++){
+//                     for(var d=1; d<=9; d++){
+//                         // 2. 4개 숫자는 중복이 없다.
+// if ( a!=b && a!=c && a!=d && b!=c && b!=d && c!=d){
+//     // 3. 1번째 숫자는 4번째 숫자보다 2만큼 크다.
+//     if( a== d+2){
+//         //4. 2번째 숫자는 3번째 숫자보다 작다.
+//         if (b<c){
+//     //5. 비밀번호숫자 + 비밀번호역순 숫자의 합은 16896이다.
+//     var num = a*1000+b*100+c*10+d;
+//     var temp = d*1000+c*100+b*10+a;
+//              if( num +temp == 16896){
+//                  alert(num);
+//             }
+//         }
+//     }    
+// }
+//                     }
+//                 }
+//             }
+//         }
         
-    var b1 = Math.floor(Math.random()*9)+1;
-    var b2=0, b3=0;
+//     var b1 = Math.floor(Math.random()*9)+1;
+//     var b2=0, b3=0;
 
-    while( (b1==b2 || b1==b3 || b2==b3)) {
-        b2=Math.floor(Math.random()*9)+1;
-        b3=Math.floor(Math.random()*9)+1;
-    }
+//     while( (b1==b2 || b1==b3 || b2==b3)) {
+//         b2=Math.floor(Math.random()*9)+1;
+//         b3=Math.floor(Math.random()*9)+1;
+//     }
 
-    var show = "";
+//     var show = "";
 
-    function find(){
-         var n1 = Number( $("#num1").val() );
-         var n2 = Number( $("#num2").val() );
-         var n3 = Number( $("#num3").val() );
-         var str=0, ball=0;
-         if(n1 == b1) str++;
-         if(n2 == b2) str++;
-         if(n3 == b3) str++;
-         if(n1 == b2 || n1 == b3) ball++;
-         if(n2 == b1 || n2 == b3) ball++;
-         if(n3 == b1 || n3 == b2) ball++;
-         show += `${n1} ${n2} ${n3} 결과 : ${str}스트라이크 ${ball}볼 ${3-str-ball}아웃 <br>`;
-        $("#result").html(show);
-        if( str==3) show+="정답!!!";
-    }
+//     function find(){
+//          var n1 = Number( $("#num1").val() );
+//          var n2 = Number( $("#num2").val() );
+//          var n3 = Number( $("#num3").val() );
+//          var str=0, ball=0;
+//          if(n1 == b1) str++;
+//          if(n2 == b2) str++;
+//          if(n3 == b3) str++;
+//          if(n1 == b2 || n1 == b3) ball++;
+//          if(n2 == b1 || n2 == b3) ball++;
+//          if(n3 == b1 || n3 == b2) ball++;
+//          show += `${n1} ${n2} ${n3} 결과 : ${str}스트라이크 ${ball}볼 ${3-str-ball}아웃 <br>`;
+//         $("#result").html(show);
+//         if( str==3) show+="정답!!!";
+//     }
     /*
         과제!!!
         인구조사!!                    prompt로 입력
@@ -256,21 +256,46 @@ if ( a!=b && a!=c && a!=d && b!=c && b!=d && c!=d){
         아동 : 1세~7세
 
         총원 10명 : 노인 2명, 성인 5명, 청소년 2명, 아동 3명
-
-
 */
+    var age = 0;
+
+    while(true){
+        var out="";
+        num=parseInt(prompt("나이 입력"));
+        age=0
+        if(num>=65){
+            out+=
+        }
+        if(num>=64 && num<=21){
+
+        }
+        if(num>=8 && num<=19){
+
+        }
+        if(num>=1 && num<=7){
+
+        }
+        if(num==0){
+            break;
+        document.write(`총원 ${ } : 노인 ${}명, 성인 ${}, 청소년 ${}명, 아동 ${}명`)
+        } 
+    }
+
+
+
+
     </script>
 <style>
     input{ width:50px;}
 </style>
 </head>
 <body>
-    <input type="text" id="num1">
+    <!-- <input type="text" id="num1">
     <input type="text" id="num2">
     <input type="text" id="num3">
     <button onclick="find()">실행</button>
 
-    <div id="result"></div>
+    <div id="result"></div> -->
 
 </body>
 </html>
