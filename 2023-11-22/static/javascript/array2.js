@@ -25,24 +25,24 @@
 //     }
 // }
 
-let num1 = [1,2,3];
-let num2 = [4,5,6];
+// let num1 = [1,2,3];
+// let num2 = [4,5,6];
 // 두 배열에 같은 인덱스위치에 있는 숫자들끼리의 합을 출력하세요
 // 결과 ->  5 7 9
-for( var i=0; i<num1.length; i++){
-    document.write((num1[i]+num2[i]) + " ");
-}
+// for( var i=0; i<num1.length; i++){
+//     document.write((num1[i]+num2[i]) + " ");
+// }
 
 // num1 과 num2 배열에서 짝수에 해당하는 숫자만
 // num3 이라는 배열에 저장하고 출력
-let num3 = new Array();
-for( var i=0; i<num1.length; i++){
-    if ( (num1[i])%2 == 0)
-        num3.push(num1[i]);
-    if( num2[i]%2 == 0)
-        num3.push(num2[i]);
-    }
-document.write( num3.sort().reverse() );
+// let num3 = new Array();
+// for( var i=0; i<num1.length; i++){
+//     if ( (num1[i])%2 == 0)
+//         num3.push(num1[i]);
+//     if( num2[i]%2 == 0)
+//         num3.push(num2[i]);
+//     }
+// document.write( num3.sort().reverse() );
 
 
 // 과제!!!
@@ -52,3 +52,13 @@ document.write( num3.sort().reverse() );
 // era -> 평균자책점
 // 7명 선수들의 평균자책점의 평균치를 구하시오
 // 평균치 이상인 선수들이 누구인지 출력하세요
+
+const name = ["주현상","윤대경","이민우","이태양","페냐","박상원","장시환"]
+let idx=0;
+let total=0;
+let era = new Array();
+let avg_below = new Array();
+
+$(funtion()){
+    $("#name")
+}
