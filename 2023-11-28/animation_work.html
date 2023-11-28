@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        #box{
+            width:10px;
+            height:50px;
+            background:rgb(255, 170, 0);
+            position:absolute;
+            top:600px;
+            left:50px;
+            animation-name: bar;
+            animation: bar 5s ease-out;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes bar{
+            from{ width: 10px; }
+            to{ width: 800px; }
+        }
+
+        #circle{
+            width:50px; height:50px;
+            background: black;
+            border-radius:100%;
+            position:absolute;
+            top: 150px;
+            left:200px;
+            animation: ball 1s ease-in infinite alternate;
+        }
+
+        #circle2{
+            width:50px; height:50px;
+            background: black;
+            border-radius:100%;
+            position:absolute;
+            top: 150px;
+            left:370px;
+            animation: ball 1s ease-in infinite alternate;
+            animation-delay: 2.5s;
+        }
+
+        #circle3{
+            width:50px; height:50px;
+            background: black;
+            border-radius:100%;
+            position:absolute;
+            top: 150px;
+            left:540px;
+            animation: ball 1s ease-in infinite alternate;
+            animation-delay: 1.3s;
+        }
+
+        @keyframes ball{
+            0%{  top:150px;  opacity:1;}
+            50%{ opacity:0.5; }
+            90% { width:50px; }
+            100%{ top:300px; width:60px; height:50px;}
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    
+    <div id="circle"></div>
+    <div id="circle2"></div>
+    <div id="circle3"></div>
+
+</body>
+</html>
