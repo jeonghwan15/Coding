@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <style>
+        #wrap{
+            
+            
+        }
+        #body{
+            width:1200px; height:1300px;
+            display:flex;
+        }
+        #body {
+            flex-wrap: wrap;
+            gap:20px;
+        }
+        #body.img{
+            position:relative;
+            width:372px; height:372px;
+        }
+     </style>
 </head>
 <body>
-    <div></div>
+    <div id="wrap">
+        <div id="header">
+
+        </div>
+        <div id="body">
+            <div class="img"><img src="./static/images/ux01.jpg" alt="ux01"></div>
+            <div class="img"><img src="./static/images/ux02.jpg" alt="ux02"></div>
+            <div class="img"><img src="./static/images/ux03.jpg" alt="ux03"></div>
+            <div class="img"><img src="./static/images/ux04.jpg" alt="ux04"></div>
+            <div class="img"><img src="./static/images/ux05.jpg" alt="ux05"></div>
+            <div class="img"><img src="./static/images/ux06.jpg" alt="ux06"></div>
+            <div class="img"><img src="./static/images/ux07.jpg" alt="ux07"></div>
+            <div class="img"><img src="./static/images/ux08.jpg" alt="ux08"></div>
+        </div>
+    </div>
 </body>
 </html>
