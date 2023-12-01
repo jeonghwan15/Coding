@@ -6,37 +6,93 @@
     <title>Document</title>
      <style>
         #wrap{
-            
-            
+            width:800px; height:300px;
+            position: relative;
         }
         #body{
-            width:1200px; height:300px;
+            position: relative;
+            padding:20px;
+        }
+        #box{
+            width:770px; height:300px;
+            position:absolute;
+            
+        }
+        #imgBox {
             display:flex;
-        }
-        #body {
             flex-wrap: wrap;
-            gap:20px;
+            position:absolute;
+            gap:10px;
+            row-gap: 110px;
         }
-        #body.img{
+        .img img{
             position:relative;
-            width:372px; height:372px;
+            width:180px; height:180px;
+            
+        }
+        #name{
+            border-radius: 1px;
+            position:absolute;  
+            background:orange;
+            height:40px; width:150px;
+            margin:160px 15px;
+            z-index:1000;
+            text-align: center ;
+            line-height: 35px;         
+        }
+        #job{
+            border-radius: 1px;
+            position:absolute;  
+            background:lightyellow;
+            height:100px; width:180px;
+            top:180px;
+            font-size: 1rem;
+            text-align: center;
+            /* margin:100px 0; */
+            
         }
      </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header">
-
+            <div id="title">
+                <h2>28 INFLUENTIAL SPEAKERS</h2>
+            </div>
         </div>
         <div id="body">
-            <div class="img"><img src="./static/images/ux01.jpg" alt="ux01"></div>
-            <div class="img"><img src="./static/images/ux02.jpg" alt="ux02"></div>
-            <div class="img"><img src="./static/images/ux03.jpg" alt="ux03"></div>
-            <div class="img"><img src="./static/images/ux04.jpg" alt="ux04"></div>
-            <div class="img"><img src="./static/images/ux05.jpg" alt="ux05"></div>
-            <div class="img"><img src="./static/images/ux06.jpg" alt="ux06"></div>
-            <div class="img"><img src="./static/images/ux07.jpg" alt="ux07"></div>
-            <div class="img"><img src="./static/images/ux08.jpg" alt="ux08"></div>
+            <div id="box">
+                <div id=imgBox>
+                    <div class="img"><img src="./static/images/ux01.jpg" alt="ux01"></div>
+                    <div class="img"><img src="./static/images/ux02.jpg" alt="ux02"></div>
+                    <div class="img"><img src="./static/images/ux03.jpg" alt="ux03"></div>
+                    <div class="img"><img src="./static/images/ux04.jpg" alt="ux04"></div>
+                    <div class="img"><img src="./static/images/ux05.jpg" alt="ux05"></div>
+                    <div class="img"><img src="./static/images/ux06.jpg" alt="ux06"></div>
+                    <div class="img"><img src="./static/images/ux07.jpg" alt="ux07"></div>
+                    <div class="img"><img src="./static/images/ux08.jpg" alt="ux08"></div>
+                </div>
+                <div id="name">
+                    <div class="name"><b1>Genevieve Bell</b1></div>
+                    <div class="name"></div>
+                    <div class="name"></div>
+                    <div class="name"></div>
+                    <div class="name"></div>
+                    <div class="name"></div>
+                    <div class="name"></div>
+                    <div class="name"></div>
+                </div>
+                    <div id="job">
+                        <div class="job"><p>Director of Intel’s Interaction<br>and Experience Research<br>group.</p></div>
+                        <div class="job"></div>
+                        <div class="job"></div>
+                        <div class="job"></div>
+                        <div class="job"></div>
+                        <div class="job"></div>
+                        <div class="job"></div>
+                        <div class="job"></div>
+                    </div>
+            </div>
         </div>
     </div>
 </body>
