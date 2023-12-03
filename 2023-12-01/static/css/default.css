@@ -138,18 +138,53 @@ img{ width:100%;}
     top:40px;
     position:relative;
 }
+.top{
+    border-collapse: collapse;
+    font-size:17px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.top tr th{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right:1px solid white;
+    height:30px;
+    color:white;
+}
+.left{width:500px;}
+.right{width:25px;}
 .house{
     border-collapse: collapse;
     font-size:17px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.house tr th{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right:1px solid white;
+    height:30px;
+    color:white;
 }
 .house tr td{
-    border-style: 1px solid black;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right:1px solid white;
     height:30px;
+    color:white;
+    
 }
+.num{width: 150px; text-align:center;}
+.title{width: 450px; text-align:center;}
+.writer{width: 150px; text-align:center;}
+.date{width: 150px; text-align:center;}
 
 #footer{
     width:100%;
     background:#3841a5;
     padding: 70px 0 50px 0;
     text-align: center;
+    margin-top: 50px;
 }
