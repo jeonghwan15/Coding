@@ -68,18 +68,17 @@
 let result=0; //전역변수
 
 function plus( num1, num2, num3){  // 함수 정의
-    var result = num1 + num2 + num3;
+    var result = num1 + num2 + num3; 
 }
 
 function prints(){
     document.getElementById("res").innerHtml =result;
 }
 
-function avg(){
-    var k = documnet.getElementById("num1").value;
-}
+
 
 var aaa=10;
+var aaa=9;
 
 
 $(function(){  // window.onload=function(){} - html문서가 브라우저에 모두 로드되면
@@ -93,7 +92,7 @@ function avg(){
     var e = parseInt( document.querySelector("#num3").value);
 
     var tot =  total (k,m,e);
-    var everage = tot/3;
+    var everage = tot/3;  //함수내에서 정의
 }
 function total(a, b, c){
     return ( a + b + c);
