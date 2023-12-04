@@ -12,9 +12,10 @@
 
 <link rel="icon" href="./static/images/logo.ico">
 <link rel="stylesheet" href="./static/css/default.css">
-
+<link rel="stylesheet" href="./static/css/free.css">
 
 <script src="./static/javascript/index.js"></script>
+<script src="./static/javascript/free.js"></script>
 
 </head>
 <body>
@@ -79,12 +80,11 @@
             </div>
         </div>
         
-        <table class="top">
-            <tr>
-                <th class="left"></th>
-                <th class="right"></th>
-            </tr>
-        </table>
+        <div id="main">
+            <div class="boardSearch">
+                <input type="text" name="search" id="search">
+                <div class="searchBt"><i class="bi bi-search"></i></div>
+            </div>
 
         <table class="house">
             <tr>
@@ -93,6 +93,7 @@
                 <th class="writer">작성자</th>
                 <th class="date">작성일</th>
             </tr>
+            <tbody class="detail">
             <tr>
                 <td class="numCell">1</td>
                 <td class="titleCell">디지털 기술 학습의 중요성</td>
@@ -153,8 +154,9 @@
                 <td class="writerCell">단군</td>
                 <td class="dateCell">12월 1일</td>
             </tr>
+        </tbody>
         </table>
-
+    </div>
 
             
 
