@@ -104,8 +104,6 @@ function dan(end){
         $("#gugudan").append(`${num}*${i} =${num*i}<br>`); //.append 계속 값을 넣어야 되서
     }
 }
-
-function blood
 // 인풋태그, 온클릭 /  If 문
 
 //민수가 혈당을 체크하였다.
@@ -116,18 +114,62 @@ function blood
     // 당화혈색소 라고 출력
     // input 태그 값 가져오는 함수, 수치에 따라 결과 출력하는 함수  온클릭 1개 함수내에서 1개
 
+
+function sugar(){
+    var v=getBlood();
+    var out="정상혈당";
+    if(70<= v && v<=100 )
+        out += "공복혈당";
+    if(90<=v && v<=140 )
+        out += "식후 2시간 혈당1";
+    
+    if( 66.1 > v)
+        out = "당화혈색소";
+    $("#resblood").text( out );
+    
+}
+function getBlood(){
+    var v = Number( $("#bl").val() );
+    return v;
+}
     //종우가 비만도 측정을 하였다.
     // 비만도 BMI지수 계산은 몸무게/((키/100)*(키/100))
     // BMI 지수가 18.5 이하면 저체중
     // 18.5~22.9 사이면 정상
     // 23.0~24.9 사이면 과체중
     // 25 이상은 비만
+function n(v){
+    return Number(v)
+}
+    function bmi(){ //Number
+        var tall = n( $("#tall").val());
+        var wg = n($("#wg").val() );
 
+        var idx = wg / ((tall/100) * (tall/100));
+        var out="저체중";
+        if ( idx >= 25) out="비만";
+        else if (idx >=23) out="과체중";
+        else if( idx>= 18.5) out="정상";
+        $("#obesity").text ( out );
+    }
 
 </script>
 
 </head>
 <body>
+
+<!--  혈당--> 
+
+    <input type="text" id="bl">
+    <button onclick="sugar()"> 혈당수치입력 </button>
+    <div id="resblood"></div>
+    
+
+    <br><br>
+    <input type="text" id="tall" placeholder="키">
+    <input type="text" id="wg" placeholder="몸무게">
+    <button onclick="bmi()"> 비만도검사 </button>
+    <div id="obesity"></div>
 
     <button onclick="plus(10,20,30)"> 함수 실행 </button>
     <button onclick="prints()"> 결과 출력 </button>
@@ -147,14 +189,7 @@ function blood
    <button onclick="dan(7)">구구단 출력</button>
    <div id="gugudan"></div>
 
-    <br><br>
-    <input type="text" id="blood()">
-    <button onclick=""> 수치 입력 </button>
 
-    <br><br>
-    <input type="text" id="weight()">
-    <input type="text" id="height()">
-    <button onclick=""> 수치 입력 </button>
 
 
 </body>
