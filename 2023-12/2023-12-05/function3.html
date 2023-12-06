@@ -97,11 +97,14 @@
       setInterval 사용 해야함 멈출 때 clearInterval
 
 */
-let imgArray = new Array();
-imgArray[0]="#"
-imgArray[1]=
-imgArray[2]=
+let timer = 0;
+let speed = 300;
 
+let a;
+{
+    a = Math.floor(Math.random()*3);
+    img.src=imgArray[a];
+}
 
 $(function(){
     
