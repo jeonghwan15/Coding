@@ -7,10 +7,7 @@
 <!--Jquery-->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
     <style>
-        #game{
-            display: flex;
-        }
-        #wrap{
+                #wrap{
             display:grid;
             width:500px;
             grid-template-columns: repeat(4,1fr);
@@ -97,52 +94,38 @@
       setInterval 사용 해야함 멈출 때 clearInterval
 
 */
-let timer = 0;
-let speed = 300;
+</script>
 
-let a;
-{
-    a = Math.floor(Math.random()*3);
-    img.src=imgArray[a];
-}
+<link rel="stylesheet" href="./static/css/game.css">
 
-$(function(){
-    
-});
+<script src="./static/javascript/game.js"></script>
 
+
+</head>
+<body>
+
+    <div id="screen">
+        <div id="comView">
+            <div class="com">
+                <img id="comImg">
+            </div>
+        </div>
+        <div id="userView">
+            <div class="user scissors"><img src="./static/images/scissors.png" alt="가위"></div>
+            <div class="user rock"><img src="./static/images/rock.png" alt="바위"></div>
+            <div class="user paper"><img src="./static/images/paper.png" alt="보"></div>
+        </div>
+        <div id="result">
+            <div class="bt"> <button id="start">시작</button></div>
+            <div class="res"></div>
+        </div>
+    </div>
 
 </script>
 
 </head>
 <body>
-    <!-- 가위바위보 -->
-    <div id="game">
-        <div id="com">
-            <div class="rock1">
-                <image src="./static/images/rock.png" alt="rock1">
-            </div>
-            <div class="scissors1">
-                <image src="./static/images/scissors.png" alt="scissors1">
-            </div>
-            <div class="paper1">
-                <image src="./static/images/paper.png" alt="paper1">
-            </div>
-        </div>
-        <div id="user">
-            <div class="rock2">
-                <image src="./static/images/rock.png" alt="rock2">
-            </div>
-            <div class="scissors2">
-                <image src="./static/images/scissors.png" alt="scissors2">
-            </div>
-            <div class="paper2">
-                <image src="./static/images/paper.png" alt="paper2">
-            </div>
-        </div>
-    </div>
-    <button onclick"start()">게임시작</button>
-
-
+    
     <!--  계산기  
     dataset -> data-이름 = '데이터(값)'
     -->
