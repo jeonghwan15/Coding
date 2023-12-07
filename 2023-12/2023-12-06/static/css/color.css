@@ -10,13 +10,13 @@
 }
 button{
     width:150px; font-size:20px;
-    padding: 5x 15px;
+    padding:5px 15px;
 }
 .colorList{
     display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap:10px;
     margin-bottom:20px;
 }
