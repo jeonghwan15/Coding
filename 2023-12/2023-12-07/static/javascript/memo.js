@@ -7,12 +7,12 @@ function memo( num, content , importance ){ // 작성된 메모 저장객체
     this.content=content;
     this.importance=importance;
 }
-memo.prototype.create= function(){
+memo.prototype.create= function( i ){
      return `<div class='memoItem'> 
             <b>${this.num}</b>
             <h3>${this.content}</h3>
             <div style='width:70px;background:${this.importance.color}'>${this.importance.text}</div>
-            <div class='del' 'onclick=data-index=${i}'><i class="bi bi-trash3"></i></div>
+            <div class='del' onclick='del_memo(${i})'><i class="bi bi-trash"></i></div>
      </div>`
 }
 
@@ -74,47 +74,46 @@ function save(){ // 등록버튼 클릭하면 동작함수
     num++;  
 
     // 삭제 아이콘 클릭 기능 적용
-    $(".del").on("click", del_memo );
+    // $(".del").on("click", del_memo );
+
+    // var dl = document.getElementsByClassName("del");
+    // for(var i in dl){
+    //     dl[i].addEventListener("click", del_memo);
+    // }
 
     console.log( text+ "  "+ 중요도 );
 
 }
 let f=true;
 function del_memo( n ){
-    
 
-    for( var i in memo_list){ // memo객체저장된 배열 전체 조회
-        if(n == memo_list[i].num){ // 삭제할 번호와 일치하는 memo객체 찾기
-        memo_list.splice(i, 1); // 배열에서 삭제
+    
+    for( var i in memo_list){  // memo객체저장된 배열 전체 조회
+        if(n == memo_list[i].num){ // 삭제할 번호 와 일치하는 memo객체찾기
+            memo_list.splice(i, 1);// 배열에서 삭제
         }
     }
-        $(".memoList").empty(); // 목록 태그 전체 비우기
-        for ( var v of memo_list){ //memo_list 배열에 있는 memo객체 다시출력
-            $(".memolist").prepend( v.create( v.num ) );
-        }
-    
-    
-    
-    
+
+    $(".memoList").empty(); // 목록 태그 전체 비우기
+    for( var v of memo_list){  //memo_list 배열에 있는 memo객체 다시출력
+        $(".memoList").prepend( v.create( v.num ) );
+    }
+
+
     // var div = $(this); //삭제하고자 클릭한 아이콘의 div 
-   
-
-    $(".memoList").empty();
-    $.each( memoList, function( idx, item){
-        $(".memoList").prepend(item.create(idx) );
-    });
-}    
-    // $(".del").on("click", del_memo );
-    // console.log( index );
-
+    
 
     // parent() : 바로위의 부모 태그 가져오기
     // parents() : 위에 있는 모든 부모 태그들
-    // var parent = div.parent();
+    //var parent = div.parent();
     // empty()  : 선택한 태그안에 전부를 비우기
     // remove()  : 선택한 태그안에 전부 를 삭제하고 자기 자신도 삭제 된다.
-    // unwrap()  : 선택한 태그의 부모를 삭제
-    // parent.remove();
+    // unwrap() : 선택한 태그의 부모를 삭제
+    //parent.remove();
+}
+
+
+
 
 /*
     맵 만들어오기!!!
@@ -123,21 +122,12 @@ function del_memo( n ){
 
     바로바로
     예) 부루마블 게임판
-    대한민국과 일본 도시 이름으로 칸을 채춰 오기
+    대한민국과 일본 도시 이름으로 칸을 채워 오기
     각 면마다 서로 다른색
     돌리는 거 트랜스폼
     이미지 5개 각 사이드 4개 중앙이미지 1개
     왠만하면 자바스크립트 색깔 도시이름
 */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -158,4 +148,3 @@ function del_memo( n ){
     // .appendChild(태그또는텍스트)  -> .append(태그또는 텍스트)
     // setAttribute("id","aa")  -> .attr("id","aa")
     // getAttribute("id")  -> .attr("id")
-
