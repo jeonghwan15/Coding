@@ -1,111 +1,65 @@
-
-MyMarble.ui.board = new (function()
-{
-	// 보드판에 대한 그룹 정보
-	var oBoardSet = null;
-	var oBoardRect = null;
-
-	// 보드판 스타일 정보
-	var oBoardStyle = { width : 500 , height : 500 };
-	
-	// 보드판에 그려진 셀 사각형 객체
-	var arrBoardCell = [];
-
-	this.init = function()
-	{
-		// 보드판 만들기
-		this.createBoardHolder();
-
-		// 도시,관광지,찬스카드 등의 셀 만들기
-		this.initBoardCell();
-
+var Tiles = { "List" : [
+	{"label":"strand", "price":"£220", "icon":"", "color":"red", "order": "2", "pos":"top"},
+	{"label":"chance", "price":"", "icon":"❓", "color":"none", "order": "3", "pos":"top"},
+	{"label":"fleet street", "price":"£220", "icon":"", "color":"red", "order": "4", "pos":"top"},
+	{"label":"trafalgar square", "price":"£240", "icon":"", "color":"none", "order": "5", "pos":"top"},
+	{"label":"fenchurch st. station", "price":"£200", "icon":"🚂", "color":"none", "order": "6", "pos":"top"},
+	{"label":"leicester square", "price":"£260", "icon":"", "color":"yellow", "order": "7", "pos":"top"},
+	{"label":"ceventry street", "price":"£200", "icon":"", "color":"yellow", "order": "8", "pos":"top"},
+	{"label":"water<br>works", "price":"£150", "icon":"🚰", "color":"none", "order": "9", "pos":"top"},
+	{"label":"piccadilly", "price":"£280", "icon":"", "color":"yellow", "order": "10", "pos":"top"},
+	{"label":"vine street", "price":"£200", "icon":"", "color":"orange", "order": "12", "pos":"left"},
+	{"label":"marlborog'h street", "price":"£200", "icon":"", "color":"orange", "order": "15", "pos":"left"},
+	{"label":"community chest", "price":"", "icon":"💰", "color":"none", "order": "17", "pos":"left"},
+	{"label":"bow street", "price":"£180", "icon":"", "color":"orange", "order": "19", "pos":"left"},
+	{"label":"marylebone station", "price":"£200", "icon":"🚂", "color":"none", "order": "21", "pos":"left"},
+	{"label":"northumrl'd avenue", "price":"£160", "icon":"", "color":"pink", "order": "23", "pos":"left"},
+	{"label":"whitehall", "price":"£140", "icon":"", "color":"pink", "order": "25", "pos":"left"},
+	{"label":"electric company", "price":"£150", "icon":"💡", "color":"none", "order":" 27", "pos":"left"},
+	{"label":"pall mall", "price":"£140", "icon":"", "color":"pink", "order": "29", "pos":"left"},
+	{"label":"regent street", "price":"£300", "icon":"", "color":"green", "order": "14", "pos":"right"},
+	{"label":"oxford street", "price":"£300", "icon":"", "color":"green", "order": "16", "pos":"right"},
+	{"label":"community chest", "price":"", "icon":"💰", "color":"none", "order": "18", "pos":"right"},
+	{"label":"bond street", "price":"£320", "icon":"", "color":"green", "order": "20", "pos":"right"},
+	{"label":"liverpool st. station", "price":"£320", "icon":"🚂", "color":"none", "order": "22", "pos":"right"},
+	{"label":"chance", "price":"", "icon":"", "color":"none", "order": "24", "pos":"right"},
+	{"label":"park lane", "price":"£350", "icon":"", "color":"blue", "order": "26", "pos":"right"},
+	{"label":"super<br />tax", "price":"£100", "icon":"💍", "color":"none", "order": "28", "pos":"right"},
+	{"label":"mayfair", "price":"£400", "icon":"", "color":"blue", "order": "30", "pos":"right"},
+	{"label":"pentonville road", "price":"£120", "icon":"", "color":"sky", "order": "32", "pos":"bottom"},
+	{"label":"euston road", "price":"£100", "icon":"", "color":"sky", "order": "33", "pos":"bottom"},
+	{"label":"chance", "price":"", "icon":"❓", "color":"none", "order": "34", "pos":"bottom"},
+	{"label":"the angel, islington", "price":"£100", "icon":"", "color":"sky", "order": "35", "pos":"bottom"},
+	{"label":"kings cross station", "price":"£200", "icon":"🚂", "color":"none", "order": "36", "pos":"bottom"},
+	{"label":"income<br />tax", "price":"£200", "icon":"🔸", "color":"none", "order": "37", "pos":"bottom"},
+	{"label":"whitechapel road", "price":"8만원", "icon":"", "color":"brown", "order": "38", "pos":"bottom"},
+	{"label":"요코하마", "price":"8만원", "icon":"", "color":"brown", "order": "39", "pos":"bottom"},
+	{"label":"후쿠오카", "price":"5만원", "icon":"", "color":"brown", "order": "40", "pos":"bottom"}
+  ]};
+  
+  var tiles = "";
+  
+  for (var t = 0; t < Tiles.List.length; t++){
+  tiles += "<div class=\"" + Tiles.List[t].pos + " " + Tiles.List[t].color + "\" style=\"--order:" + Tiles.List[t].order + ";\"><div class=\"inside\"><h2>" + Tiles.List[t].label + "</h2> <span>" + Tiles.List[t].icon + "</span> <strong>" + Tiles.List[t].price + "</strong></div></div>"
+  }
+  
+  $(".frame").append(tiles);
+  
+  
+  $(".table").click(function(){
+	if ($(this).hasClass("stop")) {
+		$(this).removeClass("stop");
+		$(this).addClass("start");
+		setTimeout(function(){
+		  $(".table").addClass("rotation");
+		},2000);
+	} else if (!$(this).hasClass("stop")) {
+		$(this).addClass("hide");
+		$(this).addClass("stop");
+		setTimeout(function(){
+		  $(".table").removeClass("hide");
+		  $(".table").removeClass("start");
+		  $(".table").removeClass("rotation");
+		},2000);
 	}
-
-	this.getSize = function()
-	{
-		return oBoardStyle;
-	}
-
-	// 보드판을 만듭니다.
-	this.createBoardHolder = function()
-	{
-		console.log("[보드 셀 셋팅]");
-
-		// 스테이지 인스턴스
-		var oStage = MyMarble.ui.stage.getStage();
-
-		// 보드판 묶음 그룹 획득
-		oBoardSet = oStage.set();
-
-		// 스테이지 사이즈 획득
-		var stageSize = MyMarble.ui.stage.getStageSize();
-
-		oBoardRect = oStage.rect((stageSize.w/2)-(oBoardStyle.width/2),
-									(stageSize.h/2)-(oBoardStyle.height/2),
-									oBoardStyle.width, oBoardStyle.height, 0).attr({fill: "#949393"});
-		oBoardSet.push( oBoardRect );
-
-		var oBoardImg = oStage.image( MyMarble.getImgUrl("bg_board.png") , oBoardRect.attr('x') , oBoardRect.attr('y') , oBoardRect.attr('width') , oBoardRect.attr('height') );
-		oBoardSet.push( oBoardImg );
-	}
-
-	// 도시,관광지,찬스카드 등의 셀 만듭니다.
-	this.initBoardCell = function()
-	{
-		// 셀 배열 초기화
-		arrBoardCell = ["*"];
-
-		var cx = 0, cy = 0, pos;
-		
-		// 보드판에는 총 32개의 셀이 올 수 있음.
-		for (var i = 1; i <= 32 ; i++ )
-		{			
-			arrBoardCell.push( new MyMarble.ui.cell(i, oBoardRect, oBoardSet, cx , cy) );
-
-			pos = arrBoardCell[i].getPos();
-			cx = pos.x;
-			cy = pos.y;
-		}
-	}
-
-	this.getCell = function(cellNo)
-	{
-		return arrBoardCell[cellNo];
-	}
-
-	// 보드 셀에 대한 객체 반환
-	this.getCellObject = function(cellNo)
-	{
-		return arrBoardCell[cellNo].getCellRect();
-	}
-
-	// 특정 셀의 x,y 좌표 정보를 반환합니다.
-	this.getCellPos = function(cellNo)
-	{
-		return { x : this.getCellObject(cellNo).attr("x") , y : this.getCellObject(cellNo).attr("y") };
-	}
-
-	// 특정 셀의 너비 정보를 반환합니다.
-	this.getCellSize = function(cellNo,scale)
-	{
-		if (scale == undefined)
-			scale = 1;
-
-		return { w : this.getCellObject(cellNo).attr("width")*scale , h : this.getCellObject(cellNo).attr("height")*scale };
-	}
-
-	// 보드를 회전 시킴
-	this.rotateBoard = function()
-	{
-		var l_coord = oBoardSet.getBBox().x,
-			r_coord = oBoardSet.getBBox().x2,
-			t_coord = oBoardSet.getBBox().y,
-			b_coord = oBoardSet.getBBox().y2;
-
-		var cx = (l_coord + r_coord)/2,
-			cy = (t_coord + b_coord)/2;
-
-		oBoardSet.rotate(45,cx,cy);
-	}
-
-});
+  });
