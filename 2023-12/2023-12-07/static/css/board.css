@@ -220,7 +220,7 @@ main .table.rotation {
   border-radius: 7px;
 }
 .frame > div.center .logo:after {
-  content: "🎩";
+  content: "";
   display: block;
   position: absolute;
   top: -40px;

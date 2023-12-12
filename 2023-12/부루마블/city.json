@@ -1,0 +1,126 @@
+[
+{
+    "back":"복지기금.jpg",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"복지기금",
+    "owner":"",
+    "purchase":"0"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"화성",
+    "owner":"",
+    "purchase":"25"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"성남",
+    "owner":"",
+    "purchase":"27"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"창원",
+    "owner":"",
+    "purchase":"26"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"제주",
+    "owner":"",
+    "purchase":"34"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"용인",
+    "owner":"",
+    "purchase":"28"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"수원",
+    "owner":"",
+    "purchase":"27"
+},
+{
+    "back":"",
+    "color":"#FFBB00",
+    "func":"",
+    "name":"울산",
+    "owner":"",
+    "purchase":"39"
+},
+{
+    "back":"인천공항.jpg",
+    "color":"#5F00FF",
+    "func":"",
+    "name":"인천공항",
+    "owner":"",
+    "purchase":"0"
+},
+{
+    "back":"",
+    "color":"#5F00FF",
+    "func":"",
+    "name":"청주",
+    "owner":"",
+    "purchase":"16"
+},
+{
+    "back":"",
+    "color":"#5F00FF",
+    "func":"",
+    "name":"광주",
+    "owner":"",
+    "purchase":"42"
+},
+{
+    "back":"",
+    "color":"#53C14B",
+    "func":"",
+    "name":"부천",
+    "owner":"",
+    "purchase":"20"
+},
+{
+    "back":"",
+    "color":"#5F00FF",
+    "func":"",
+    "name":"대구",
+    "owner":"",
+    "purchase":"45"
+},
+{
+    "back":"",
+    "color":"#53C14B",
+    "func":"",
+    "name":"남양주",
+    "owner":"",
+    "purchase":"19"
+},
+{
+    "back":"",
+    "color":"#5F00FF",
+    "func":"",
+    "name":"인천",
+    "owner":"",
+    "purchase":"45"
+},
+
+
+
+
+]
