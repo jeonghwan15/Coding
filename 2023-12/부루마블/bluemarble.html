@@ -17,9 +17,17 @@
 <script src="./static/javascript/board.js"></script>
 <script src="./static/javascript/game.js"></script>
 <script>
-    // $.getJSON( "./city.json" , function( data ){ 
-        
-    // });
+     $.getJSON( "./city.json" , function( data ){ 
+        var items = [];
+     $.each( data, function(  ) {
+         items.push( "" );
+     });
+ 
+    $( "<ul/>", {
+        "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
 </script>
 
 </head>
