@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--Jquery-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<style>
+    #toy{
+        background: red;
+        width:200px;
+        list-style:none;
+    }
+</style>
+</head>
+<body>
+    
+    <div id="box">
+        <!-- ul 태그 찾기 -> id로 찾으면 됨 -> toy -->
+        <ul id="toy"> 
+            <li class="favorite">1</li>
+            <li class="favorite">2</li>
+            <li class="favorite"> <p></p> </li>
+            <li class="favorite"> <b></b> </li>
+            <li class="favorite">5</li>
+            <li class="favorite">6</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+<script>
+    var toy = document.getElementById("toy");
+    toy.style.listStyle="none"; // -  listStyle 문자열로만
+    $("#toy").css("list-style","none");
+
+    var fv = document.getElementsByClassName("favorite") // $(".favorite")
+    fv[1] //key value
+    fv[3] // 값일 경우 length을 가지고 있다
+
+    // b태그 안에만 "집에가자" 라고 넣기
+    
+    var len = fv.length;
+
+    for ( var i=0; i<len; i++){
+         if(fv[i].children.length !=0 ){
+            if( fv[i].children[0].localName == "b" ){
+                fv[i].children[0].innerHTML ="집에가자";  // eq = fv[i]  [i] -> 몇 번째
+            }
+         }
+             
+        
+    }
+        
+        // fv[i].innerHTML="하하하 집에 가고 싶다";
+    
+   
+
+    console.log(fv);// alert 같은 것 말고 console.log를 해봐야 값을 알 수 있다 
+
+    // console.log(toy);
+
+    // console.log(document.getElementsByTagName("ul"));
+</script>
