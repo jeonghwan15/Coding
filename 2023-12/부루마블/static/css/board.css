@@ -66,7 +66,7 @@ border-top:1px solid black;}
 
 
 .center{
-    background: url("../images/중앙.png") no-repeat center;
+    background: url("../images/중앙.jpg") no-repeat center;
     background-size:cover;
 }
 
@@ -121,6 +121,7 @@ border-top:1px solid black;}
     font-size:20px;
     padding:3px 10px;
 }
+
 .meeple{
     position:absolute;
     font-size:80px;
@@ -128,32 +129,38 @@ border-top:1px solid black;}
     left:50%;
     transform: translate(-50%,-50%);
     z-index:10;
+    opacity: 0.8;
+    text-shadow: 0px 0px 5px #000;
 }
 
-img{ width:100%; }
+img{
+    width:100%;
+}
+
 #dice_wrap{
     position:absolute;
     width:300px;
     top:400px;
     left:50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 .dice{
     display:flex;
-    column-gap:20px;
+    column-gap: 20px;
 }
+
 .dicebt{
     margin-top:20px;
     text-align: center;
 }
 .dicebt button{
     border: 0;
-    background:lightseagreen;
+    background:brown;
     color:#fff;
     font-size:40px;
-    padding: 10px 50px;
+    padding:10px 50px;
     border-radius: 10px;
-    box-shadow: 4px 3px 3px #222;
+    box-shadow:4px 3px 3px #222;
     cursor: pointer;
 }
 .dicebt button:active{
@@ -163,5 +170,5 @@ img{ width:100%; }
 }
 .diceImg img{
     box-shadow: 5px 5px 3px #111;
-    border-radius:20px;
+    border-radius: 20px;
 }
