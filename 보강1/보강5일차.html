@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    // sum = sum1_100();
+    // document.write( sum +"<br>"); // 1부터 100까지 총합
+
+    // for(var i=100; i>=80; i--){ // 100부터 80까지의 합을 빼기
+    //     sum-=i;
+    // }
+    // document.write( sum + "<br>");
+
+    // sum = sum1_100();
+    // document.write( (sum**2) +"<br>");
+
+    // function write( out ){
+    //     document.write( out+"<br>")
+    // }
+
+    // function sum1_100(){
+    //     var sum=0;
+    // for( var i=1; i<=100; i++)
+    //     sum+=i;
+    // return sum;
+        
+    // }
+
+// 함수 정의 만들기
+// 1. 함수 이름 정하기 - 함수의 목적에 맞는 이름( 함수를 통해 위치를 찾는다 - find)
+// 2. 매개변수 유무
+// 3. 내용은 함수를 정의 하겠다 할때부터 정해져있어야한다.
+// 4. 반환 유무(return)
+// function name(){
+
+// }
+    score();
+    function score(){
+    var kor=88;
+    var eng=99;
+    var mat=84;
+    var his=93;
+    a(kor,eng,mat,his);
+
+    b(kor,eng,mat,his);
+
+    c(total);
+
+
+function a(kor,eng,mat,his){
+    document.write("국어 : "+kor+"점<br>");
+    document.write("영어 : "+eng+"점<br>");
+    document.write("수학 : "+mat+"점<br>");
+    document.write("사회 : "+his+"점<br>");
+    }
+function b(kor,eng,mat,his){
+    var total=kor+eng+mat+his;
+    document.write("총점 : "+total+"<br>");
+    return total;
+    }
+function c(total){
+    var avg = total/4;
+    document.write("평균 : "+avg);
+    }
+
+}
+
+
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
