@@ -1,0 +1,144 @@
+#wrap{
+    position: relative;
+    width:1920px;
+    height:1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 30px;
+}
+.navbar_main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #000;
+    z-index: 999;
+    animation: navbarBottom 1s forwards;
+}
+    
+.navbar_text{
+    font-size: 32px;
+}
+    
+.navbar_links {
+    margin-right: 5%;
+}
+    
+.navbar_links a {
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    padding: 5px;
+}
+    
+.navbar_links a:last-child {
+    margin-right: 0;
+}
+    
+.navbar_links a::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #ecf000;
+    transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+    
+.navbar_links a:hover::before {
+    width: 100%;
+    left: 0;
+}
+    
+.navbar_logo {
+    margin-left: 5%;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 1820px;
+    height: 1011px;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    gap: 58px;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 28.5px 150px;
+    width: 1820px;
+    height: 50px;
+}
+.productWrap{
+    flex: none;
+    width: 1549px;
+    height: 950px;
+}
+
+.imageBox{
+    position:absolute;
+    width: 742px;
+}
+.model{
+    width: 590px;
+}
+.model img{
+    border-radius: 30%;
+}
+.slide{
+
+}
+
+.product{
+    position: absolute;
+    width: 750px;
+    height: 945px;
+    left: 799.5px;
+    top: 5px;
+}
+.product1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    width: 670px;
+    height: 235px;
+    top: 0px;
+    left: 0px;
+}
+.product1 img{
+    width: 135px;
+    height: 135px;
+}
+
+
+.heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+.heart:active{
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 1px 1px;
+}

@@ -49,9 +49,9 @@
     left: 0;
 }
     
-    .navbar_logo {
+.navbar_logo {
     margin-left: 5%;
-    }
+}
 
 img{ width: 100%;}
 
@@ -64,10 +64,24 @@ img{ width: 100%;}
 #imageBox{
     position:absolute;
     width: 100%;
-    border-radius: 20%;
+    z-index: 10;
     }
 
 .image_sc{
-    width: 900px;
-    padding: 220px 100px;
+    width: 590px;
+    padding: 115px 165px;
+    
 }
+.image_sc img{
+    border-radius: 75px;
+}
+
+#textBox{
+    position: absolute;
+    width: 800px;
+    height: 750px;
+    border-radius: 75px;
+    margin: 120px 870px;
+    background-color: gray;
+}
+
